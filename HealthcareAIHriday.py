@@ -2,9 +2,14 @@ import streamlit as st
 import pywhatkit
 import google.generativeai as genai
 
-genai.configure(api_key=" AIzaSyCSQjMiklNptX9vD0lo1_oMPG3-uSd8wUo")
+genai.configure(api_key="YOUR_API_KEY")
 model = genai.GenerativeModel('gemini-1.5-flash')
-
+# For GEMINI API KEY: 
+# 🔗 Go to Google AI Studio
+# Sign in with your Google account.
+# Click "Get API Key" in the top-right corner.
+# Accept the terms and conditions.
+# Copy your API key.
 def healthcare_chatbot(user_input):
     if "symptom" in user_input:
         return "Please consult a doctor for accurate advice."
